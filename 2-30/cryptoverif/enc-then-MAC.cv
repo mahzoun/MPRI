@@ -1,0 +1,56 @@
+(* Encrypt-then-MAC example *)
+
+param n.
+
+type mkey [fixed].
+type key [fixed].
+type macs [bounded].
+
+fun k2b(key):bitstring [data].
+
+(* Shared-key encryption (CPA Stream cipher) *)
+
+proba Penc.
+
+expand IND_CPA_sym_enc(key, bitstring, bitstring, enc, dec, injbot, Z, Penc).
+
+(* The function Z returns for each bitstring, a bitstring
+   of the same length, consisting only of zeroes. *)
+const Zk:bitstring.
+equation forall y:key; 
+	Z(k2b(y)) = Zk.
+
+(* Mac *)
+
+proba Pmac.
+
+expand SUF_CMA_det_mac(mkey, bitstring, macs, mac, verify, Pmac).
+
+(* Queries *)
+
+query secret k'' [cv_onesession].
+query secret k''.
+
+channel cA, cB, start, c.
+
+let QA(k: key, mk: mkey) = 
+	! i <= n 
+	in(cA, ());
+	new k' : key;
+	let e = enc(k2b(k'), k) in
+	out(cA, (e, mac(e, mk))).
+
+let QB(k: key, mk: mkey) =
+	! i' <= n 
+	in(cB, (e':bitstring, ma':macs));
+	if verify(e', mk, ma') then
+	let injbot(k2b(k'':key)) = dec(e', k) in
+	out(cB, ()).
+
+process 
+	in(start, ());
+	new k: key;
+	new mk: mkey;
+	out(c, ());
+	(QA(k,mk) | QB(k,mk))
+

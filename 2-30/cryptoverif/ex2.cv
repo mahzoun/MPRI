@@ -1,0 +1,40 @@
+(* Exercise 2*)
+
+param n.
+
+
+type pkey [bounded].
+type skey [bounded].
+type keyseed [large,fixed].
+
+(* Shared-key encryption (CPA Stream cipher) *)
+
+proba Penc.
+proba Penccoll.
+
+expand IND_CCA2_public_key_enc(keyseed, pkey, skey, bitstring, bitstring, skgen, pkgen, enc, dec, injbot, Z, Penc, Penccoll).
+
+(* Queries *)
+query secret b.
+
+
+channel c, lR, cA, start, dec_ch.
+
+
+let LR(pk: pkey, sk: skey, b0: bool) =
+	! i <= n
+	in(lR, (m0: bitstring, m1: bitstring));
+	if Z(m0) = Z(m1) then
+	let cipher':bitstring = enc(if b0 then m0 else m1, pk) in 
+	out(lR, cipher').
+
+	
+process 
+	in(start, ());
+	new b: bool;
+	new rk: keyseed;
+	let pk = pkgen(rk) in
+	let sk = skgen(rk) in
+	out(c, (pk));
+	LR(pk, sk, b) 
+
