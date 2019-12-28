@@ -1,0 +1,76 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Homework 1}%replace X with the appropriate number
+\author{Mohammad Mahzoun\\ %replace with your name
+MPRI 2-18-1} %if necessary, replace with your course title
+ 
+\maketitle
+ 
+\begin{exercise}{1.1}
+	Rumor spreading in star graph is the same problem as coupon collector. Starting from each arbitrary node, informing the $ith$ node has probability $p_i = \frac{n-i}{n}$ and expected value $E_i = \frac{1}{p_i}$. The expected time $T$ of informing all nodes is:
+	\begin{center}
+		$E[T] = \sum_{i = 1}^{n} E_i  = n\times(\sum_{i = 1}^{n} \frac{i}{n}) = 
+		n \ln n + \Theta(n)$
+	\end{center}
+\end{exercise}
+
+\begin{exercise}{1.2}
+	There are $i = nf$ informed nodes. The probability that a fixed uninformed node remains uninformed after $T = \frac{1}{fg}$ rounds is:
+	\begin{center}
+		$(1 - \frac{1}{n})^{iT} = (1 - \frac{1}{n})^{\frac{n}{g}} $
+	\end{center}
+	So the expected number of informed nodes after $T$ rounds is:
+	\begin{center}
+		$n -  n(1-f)(1 - \frac{1}{n})^{\frac{n}{g}} $
+	\end{center}
+	The probability that after $T$ rounds at least $X = n(1-g)$ nodes are informed is:
+	\begin{center}
+		$Pr(X \geq n(1-g)) \leq \frac{E(X)}{n(1-g)} = 
+		\frac{1 - (1-f)(1-\frac{1}{n})^{\frac{n}{g}}}{1-g} = \frac{1 - (1 - o(1))(1-\frac{1}{n})^{\omega(n)}}{1-g} \leq 1 - o(1)$
+	\end{center}
+\end{exercise}
+ 
+\begin{exercise}{1.3}
+	content...
+\end{exercise}
+
+\begin{exercise}{1.4}
+	content...
+\end{exercise}
+
+\begin{exercise}{1.5}
+	content...
+\end{exercise}
+
+ 
+\end{document}

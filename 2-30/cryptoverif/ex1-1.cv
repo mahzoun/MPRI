@@ -1,0 +1,75 @@
+(* Exercise 1-1 1-2*)
+
+param n, Nd.
+
+type mkey [fixed].
+type key [fixed].
+type macres [bounded].
+
+fun k2b(key):bitstring [data].
+
+(* Shared-key encryption (CPA Stream cipher) *)
+
+proba Penc.
+
+expand IND_CCA2_sym_enc(key, bitstring, bitstring, enc, dec, injbot, Z, Penc).
+
+(* The function Z returns for each bitstring, a bitstring
+   of the same length, consisting only of zeroes. *)
+const Zk:bitstring.
+equation forall y:key; 
+	Z(k2b(y)) = Zk.
+
+(* Mac *)
+
+proba Pmac.
+
+expand SUF_CMA_proba_mac(mkey, bitstring, macres, mac, check, Pmac).
+
+(* Queries *)
+query secret b.
+
+
+channel c, lR, cA, start, dec_ch.
+
+letfun enc'(k: key, mk: mkey, m: bitstring) = 
+	let e = enc(m, k) in
+	(e, mac(e, mk)).
+
+
+letfun dec'(k: key, mk: mkey, cipher: bitstring) =
+	let (e: bitstring, m: macres) = cipher in 	
+	(if check(e, mk, m) then
+		dec(e, k)
+	else
+		bottom)
+	else
+		bottom. 
+
+
+let LR(k: key, mk: mkey, b0: bool) =
+	! i <= n
+	in(lR, (m0: bitstring, m1: bitstring));
+	if Z(m0) = Z(m1) then
+	let cipher':bitstring = enc'(k, mk, if b0 then m0 else m1) in 
+	out(lR, cipher').
+
+	
+let DEC(k: key, mk: mkey) = 
+	! i <= Nd
+	in(dec_ch, cipher: bitstring); 
+	let (e: bitstring, m:macres) = cipher in (
+	find j<=n suchthat defined(cipher'[j]) && cipher'[j] = cipher then
+		(let (e':bitstring, m':macres) = cipher'[j] in (if m = m' then yield else out(dec_ch, dec'(k, mk, cipher))))
+	else
+		out(dec_ch, dec'(k, mk, cipher))).
+
+
+process 
+	in(start, ());
+	new k: key;
+	new b: bool;
+	new mk: mkey;
+	out(c, ());
+	LR(k, mk, b) | DEC(k, mk)
+
