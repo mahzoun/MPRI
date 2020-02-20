@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.9)  19 FEB 2020 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.9)  20 FEB 2020 01:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1028,17 +1028,7 @@ Package hyperref Warning: Option `bookmarks' has already been used,
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 74.
 )
 \c@corollary=\count129
- (./main.aux
-
-LaTeX Warning: Label `fig:ipsum' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:ipsum' multiply defined.
-
-
-LaTeX Warning: Label `fig:esempio' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -1211,14 +1201,14 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 74
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
-<Figures/push.png, id=76, 354.32375pt x 252.945pt>
+<Figures/push.png, id=62, 354.32375pt x 252.945pt>
 File: Figures/push.png Graphic file (type png)
 <use Figures/push.png>
 Package pdftex.def Info: Figures/push.png  used on input line 89.
 (pdftex.def)             Requested size: 166.49887pt x 118.86101pt.
 LaTeX Font Info:    Font shape `T1/iwona/bx/n' in size <8> not available
 (Font)              Font shape `T1/iwona/b/n' tried instead on input line 89.
-<Figures/pull.png, id=78, 353.32pt x 244.915pt>
+<Figures/pull.png, id=64, 353.32pt x 244.915pt>
 File: Figures/pull.png Graphic file (type png)
 <use Figures/pull.png>
 Package pdftex.def Info: Figures/pull.png  used on input line 90.
@@ -1233,104 +1223,60 @@ Package microtype Info: Character `029' is missing
 LaTeX Font Info:    Font shape `T1/pplj/bx/it' in size <10> not available
 (Font)              Font shape `T1/pplj/b/it' tried instead on input line 115.
  [2 <./Figures/push.png> <./Figures/pull.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-[3]
-Overfull \hbox (4.18242pt too wide) in paragraph at lines 192--192
-[] []\T1/iwona/bx/sc/10/80ls dif-fer-ent para-graph de-scrip-tion[] \T1/pplj/m/
-n/10 Pel-len-tesque habi-tant morbi tris-tique senec-
+[3] [4] [5]
+Overfull \hbox (3.97147pt too wide) in paragraph at lines 283--284
+\T1/pplj/m/n/10 This shows that the tri-an-gu-la-tion pro-cess takes with prob-
+a-bil-ity at least $\U/zeur/m/n/10 1 \U/zeus/m/n/10 ^^@ \U/zeur/m/n/10 O\U/zeus
+/m/n/10 ¨\U/zeur/m/n/10 e[]\U/zeus/m/n/10 ©$
  []
 
-<Figures/GalleriaStampe.jpg, id=114, 414.348pt x 409.53pt>
-File: Figures/GalleriaStampe.jpg Graphic file (type jpg)
-<use Figures/GalleriaStampe.jpg>
-Package pdftex.def Info: Figures/GalleriaStampe.jpg  used on input line 233.
-(pdftex.def)             Requested size: 185.0pt x 182.84953pt.
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 234.
-(/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 234.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `fvm' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [4]
-LaTeX Font Info:    Font shape `T1/iwona/bx/it' in size <10> not available
-(Font)              Font shape `T1/iwona/b/it' tried instead on input line 245.
-
- [5 <./Figures/GalleriaStampe.jpg>]
-<Figures/Lorem.jpg, id=136, 240.9pt x 180.675pt>
-File: Figures/Lorem.jpg Graphic file (type jpg)
-<use Figures/Lorem.jpg>
-Package pdftex.def Info: Figures/Lorem.jpg  used on input line 276.
-(pdftex.def)             Requested size: 166.49887pt x 124.87814pt.
-<Figures/Ipsum.jpg, id=137, 240.9pt x 180.675pt>
-File: Figures/Ipsum.jpg Graphic file (type jpg)
-<use Figures/Ipsum.jpg>
-Package pdftex.def Info: Figures/Ipsum.jpg  used on input line 277.
-(pdftex.def)             Requested size: 166.49887pt x 124.87814pt.
-<Figures/Dolor.jpg, id=138, 240.9pt x 180.675pt>
-File: Figures/Dolor.jpg Graphic file (type jpg)
-<use Figures/Dolor.jpg>
-Package pdftex.def Info: Figures/Dolor.jpg  used on input line 278.
-(pdftex.def)             Requested size: 166.49887pt x 124.87814pt.
-<Figures/Sit.jpg, id=139, 240.9pt x 180.675pt>
-File: Figures/Sit.jpg Graphic file (type jpg)
-<use Figures/Sit.jpg>
-Package pdftex.def Info: Figures/Sit.jpg  used on input line 279.
-(pdftex.def)             Requested size: 166.49887pt x 124.87814pt.
- (./main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
- [6 <./Figures/Lorem.jpg> <./Figures/Ipsum.jpg> <./Figures/Dolor.jpg> <./Figure
-s/Sit.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
+[6] (./main.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 296.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 629442FEDA3B274147F8BF23436FDAE7;688.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 296.
+(rerunfilecheck)             Checksum: 74012E013FBBB7F93BD55EFD2480FCDD;551.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
  ) 
 Here is how much of TeX's memory you used:
- 15576 strings out of 492982
- 276605 string characters out of 6134896
- 596109 words of memory out of 5000000
- 18733 multiletter control sequences out of 15000+600000
- 139872 words of font info for 202 fonts, out of 8000000 for 9000
+ 15419 strings out of 492982
+ 273959 string characters out of 6134896
+ 603109 words of memory out of 5000000
+ 18604 multiletter control sequences out of 15000+600000
+ 120216 words of font info for 170 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 66i,23n,91p,8815b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/share
-/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/
-fonts/enc/dvips/iwona/ec-iwona-sc.enc}</usr/share/texlive/texmf-dist/fonts/type
+ 66i,22n,91p,8815b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/iwona/ec-iwona.enc}</usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
-uler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler
-/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eu
-sm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/nowacki/iwona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/nowacki/iwona/iwonabi.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/i
-wona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (6 pages, 483205 bytes).
+ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
+uler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler
+/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eu
+rm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/nowacki/iwona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowac
+ki/iwona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (7 pages, 258565 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 43644 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 37971 words of extra memory for PDF output out of 42996 (max. 10000000)
 
