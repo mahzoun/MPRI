@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.9)  20 FEB 2020 01:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.9)  20 FEB 2020 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,7 +1234,12 @@ a-bil-ity at least $\U/zeur/m/n/10 1 \U/zeus/m/n/10 ^^@ \U/zeur/m/n/10 O\U/zeus
 /m/n/10 ¨\U/zeur/m/n/10 e[]\U/zeus/m/n/10 ©$
  []
 
-[6] (./main.bbl)
+[6] (./main.bbl
+
+LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
+               before end of `thebibliography' environment on input line 3.
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
  [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
@@ -1246,10 +1251,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
  ) 
 Here is how much of TeX's memory you used:
- 15419 strings out of 492982
- 273959 string characters out of 6134896
+ 15416 strings out of 492982
+ 273877 string characters out of 6134896
  603109 words of memory out of 5000000
- 18604 multiletter control sequences out of 15000+600000
+ 18602 multiletter control sequences out of 15000+600000
  120216 words of font info for 170 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  66i,22n,91p,8815b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1273,10 +1278,10 @@ symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (7 pages, 258565 bytes).
+Output written on main.pdf (7 pages, 257604 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  37971 words of extra memory for PDF output out of 42996 (max. 10000000)
 
