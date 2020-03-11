@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Solutions} % Title of the assignment
+
+\author{Mohammad Mahzoun} % Author name and email address
+
+%\date{University of Inaba --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Exercise 1}
+\textbf{Authenticity}: The message is signed by $A$ so $B$ can verify that the message she received is indeed sent by $A$ because in order to sign a message as $A$, adversary needs to forge the signature scheme.   \\  
+\textbf{Confidentiality}: Since the messages are authenticated, in order to know the $m$, one has to find $ek$ which is equivalent to breaking the security of $penc$. $mac$ can be used to check if the message is not changed in the network.
+
+\section{Exercise 2}
+let $GEN()   = randomBytes \;16$ \\ \\
+let $A$ $(pk_B: pub\_key)$ $(sk_A: sig\_key)$ $(m: bytes)$ : $(C: bytes) =$ \\
+let private $ek = GEN()$ in \\
+let private $mk = GEN()$ in \\
+let $C_1$ = $penc$ $pk_B$ $(concat\;ek\;mk)$ in \\
+let $C_2$ = $sign$ $sk_A$ $C_1$ in \\
+let $C_3$ = $sym\_enc$ $ek$ $m$ in \\
+let $C_4$ = $mac$ $mk$ $C_3$ in \\
+$concat\; C_2 \; C_4$
+\\
+\\
+let $B$ $(pk_A: verif\_key)$ $(sk_B: priv\_key)$ $(C: bytes)$ : $(m: bytes) =$ \\
+let $C_1\; C_2 = split C$ in \\
+if $verif\; pk_A\; C_1 \; = 1 \;$ then \\
+let $M_1 = pke\_dec \; sk_B \; C_1$ in \\
+let $ek\; mk = split \; M_1$ in \\
+let $Cipher\; MAC = \; split \; C_2$ in \\ 
+let $m = sym\_dec \; ek C$ in \\
+if $mac\; Cipher \; mk$ = $MAC$ then $m$ 
+
+\section{Exercise 3}
+
+
+
+
+\end{document}

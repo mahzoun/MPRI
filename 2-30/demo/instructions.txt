@@ -1,0 +1,36 @@
+This file contains a guide to the files in this directory.
+If you have any questions or comments, email karthikeyan.bhargavan@inria.fr
+
+---------------
+
+The F* files we looked at in Lecture 4 were:
+
+- Spec.Chacha20.fst (* F* spec for Chacha20 *)
+- Demo.Chacha20.fst (* Fragment of Low* code for Chacha20 *)
+
+- Spec.Poly1305.fst (* F* spec for Poly1305 *)
+- Demo.Poly1305.fst (* Fragment of Low* code for Poly1305 *)
+
+- Demo.Crypto.fsti  (* Example F* API for Crypto: functional lemmas, no security assumptions *)
+- Demo.SignThenEncrypt.Concrete.fst (* F* code for SignThenEncrypt: no security theorems *)
+
+- Demo.LabeledCrypto.fsti (* F* Crypto API with secrecy labels: functional lemma, security assumptions for encryption *)
+- Demo.SignThenEncrypt.Labeled.fst (* F* code for SignThenEncrypt: secrecy proof *)
+
+- Demo.LabeledCrypto.AuthSig.fsti (* F* Crypto API with secrecy labels and signature predicate: functional lemmas, security assumptions for encryption and signature *)
+- Demo.SignThenEncrypt.Labeled.fst (* F* code for SignThenEncrypt: secrecy and (weak) authenticity proof *)
+
+-----------------
+
+To typecheck the code in this demo, you will need to first do the following:
+
+- Install a recent version of F* (https://github.com/FStarLang/fstar)
+- Install the F* emacs mode (https://github.com/FStarLang/fstar-mode.el)
+- Check out the code for HACL*: (https://github.com/project-everest/hacl-star)
+
+Then place all the code provided to you as part of this demo in hacl-star/specs/
+Enter the directory hacl-star/specs.
+Open each demo file in Emacs and typecheck it using F*.
+
+
+
